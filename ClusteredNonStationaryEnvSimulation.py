@@ -15,6 +15,7 @@ from lib.LinUCB import LinUCB
 from lib.AdaptiveThompson import AdaptiveThompson
 from lib.dLinUCB import dLinUCB
 from lib.CLUB import CLUBAlgorithm
+from lib.SCLUB import SCLUB
 from lib.DyClu import DyClu
 from lib.oracleLinUCB import oracleLinUCB
 
@@ -396,6 +397,8 @@ if __name__ == '__main__':
     algorithms['CLUB'] = CLUBAlgorithm(dimension=config["context_dimension"], alpha=config["CLUB_alpha"],
                                        lambda_=config["lambda_"], n=config["n_users"],
                                        alpha_2=config["CLUB_alpha_2"], cluster_init=config["cluster_init"])
+    algorithms['SCLUB'] = SCLUB(nu=config["n_users"], d=config["context_dimension"], NoiseScale=config["NoiseScale"],
+                                lambda_=config["lambda_"])
     algorithms['DyClu'] = DyClu(dimension=config["context_dimension"], alpha=config["alpha"],
                                 lambda_=config["lambda_"],
                                 NoiseScale=config["NoiseScale"], tau_e=config["tau"],

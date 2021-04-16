@@ -3,7 +3,7 @@
 This repository contains implementation of the proposed algorithm DyClu, and baseline algorithms for comparison:
 - LinUCB
 - dLinUCB and adTS
-- CLUB
+- CLUB and SCLUB
 - oracleLinUCB
 
 For experiments on the synthetic dataset, directly run:
